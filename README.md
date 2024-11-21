@@ -2,7 +2,7 @@
 
 Production URL:
 
-- [https://analytics-charts.netlify.app/](https://analytics-charts.netlify.app/) uses 
+- [https://analytics-charts.netlify.app/](https://analytics-charts.netlify.app/)
 
 
 
