@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login, { withAuth } from "./pages/LoginPage/LoginPage";
 import Dashboard from "./components/AnalyticsDashboard/AnalyticsDashboard";
 
@@ -15,8 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<AuthenticatedDashboard />} />
-        <Route path="/" element={<Navigate to="/dashboard" />} />
+        <Route path="/" element={<AuthenticatedDashboard />} />
       </Routes>
     </Router>
   );

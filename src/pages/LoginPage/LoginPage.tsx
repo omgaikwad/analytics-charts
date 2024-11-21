@@ -45,7 +45,7 @@ const Login: React.FC<LoginProps> = () => {
       Cookies.set("authToken", token, { expires: 1 }); // expires in 1 day
 
       // Redirect to dashboard
-      navigate("/dashboard");
+      navigate("/");
     } else {
       alert("Invalid credentials");
     }
