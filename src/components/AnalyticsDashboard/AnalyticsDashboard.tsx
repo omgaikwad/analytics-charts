@@ -10,7 +10,7 @@ import {
   PointElement,
   TimeScale,
 } from "chart.js";
-import { Button, Select, MenuItem, Box, Icon } from "@mui/material";
+import { Button, Select, MenuItem, Box } from "@mui/material";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { DatePicker } from "@mui/x-date-pickers";

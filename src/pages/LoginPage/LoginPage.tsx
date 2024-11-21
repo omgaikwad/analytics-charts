@@ -24,7 +24,7 @@ interface LoginProps {
   onLoginSuccess?: () => void;
 }
 
-const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
+const Login: React.FC<LoginProps> = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -49,10 +49,6 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     } else {
       alert("Invalid credentials");
     }
-  };
-
-  const handleSignupRedirect = () => {
-    navigate("/signup");
   };
 
   return (
