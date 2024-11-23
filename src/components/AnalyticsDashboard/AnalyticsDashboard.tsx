@@ -69,6 +69,8 @@ const Dashboard: React.FC = () => {
     endDate: moment("08-10-2022", "DD-MM-YYYY"),
   });
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   // Function to get initial filters from URL or cookies
   const getInitialFilters = (): Filters => {
     // Check URL parameters first
@@ -127,7 +129,7 @@ const Dashboard: React.FC = () => {
     const { age, gender, startDate, endDate } = filters;
 
     try {
-      const response = await axios.get("http://localhost:5000/api/data", {
+      const response = await axios.get(`${apiUrl}/api/data`, {
         params: { age, gender, startDate, endDate },
       });
 
@@ -155,12 +157,9 @@ const Dashboard: React.FC = () => {
     const { age, gender, startDate, endDate } = filters;
 
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/time-trend-data",
-        {
-          params: { feature, age, gender, startDate, endDate },
-        }
-      );
+      const response = await axios.get(`${apiUrl}/api/time-trend-data`, {
+        params: { feature, age, gender, startDate, endDate },
+      });
 
       const data = response.data;
       setLineData(data);
